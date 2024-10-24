@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASL SHOP - En Construcción</title>
+    <link rel="icon" href="https://programmer-hugo.github.io/asl-shop/ASL-Shop.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .container-2:last-of-type a {
+            color: white;
+            text-decoration: none;
+        }
+        .container-2:last-of-type a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        .section1 {
+            background-image: url('https://programmer-hugo.github.io/asl-shop/ASL Shop-Photoroom.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container1 {
+            text-align: center;
+            margin: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+        .p1 {
+            color: white;
+            margin: 10px 0;
+        }
+        header {
+            padding: 1rem;
+            text-align: center;
+            background-color: #1e1e1e;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        .logo {
+            max-width: 300px;
+            width: 100%;
+        }
+        nav {
+            background-color: #ff0000;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .product-coming-soon {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 2rem;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .product {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        .construction-icon {
+            font-size: 2rem;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://programmer-hugo.github.io/asl-shop/ASL-Shop.png" alt="Logo de ASL SHOP" class="logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+        </ul>
+    </nav>
+    <section class="section1">
+        <div class="container1">
+            <h1>Bienvenido a ASL SHOP</h1>
+            <h2>Dolores Hidalgo C.I.N., Gto.</h2>
+            <p>Estamos trabajando duro para traerte los mejores productos de estilo urbano.</p>
+            <a href="#productos" class="cta-button">Más Información</a>
+        </div>
+    </section>
+    <main>
+        <section id="productos">
+            <div class="container1">
+            <h2>Nuestros Productos</h2>
+            <div class="products">
+                <div class="container1">
+                    <p class="p1">
+                        <strong>PRÓXIMAMENTE</strong>
+                    </p>
+                    <p>Estamos preparando una increíble selección de productos para ti. ¡Vuelve pronto!</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>    
+        <div class="social-links">
+            <div class="container-2">
+                <a href="https://www.instagram.com/asl_shop0" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn.icon-icons.com/icons2/836/PNG/96/Instagram_icon-icons.com_66804.png" alt="Instagram" width="75px" height="75px">
+                </a>
+                <a href="mailto:asl.shop.oficial@gmail.com">
+                    <img src="https://cdn.icon-icons.com/icons2/614/PNG/96/email-envelope-outline-shape-with-rounded-corners_icon-icons.com_56530.png" alt="Email" width="75px" height="75px" style="filter: invert(1);">
+                </a>
+            </div>
+        </div>
+        <div class="container-2">
+            <p>
+                <a href="https://programmer-hugo.github.io/about-me">Página Web hecha por Hugo Elias</a>
+            </p>
+        </div>
+        <p>&copy; 2025 ASL SHOP. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
