@@ -108,6 +108,57 @@
             border-radius: 5px;
             text-align: center;
         }
+        .urban-button {
+            position: relative;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .urban-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .urban-button:hover {
+            transform: translateY(-5px) rotate(-3deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .urban-button:hover::before {
+            opacity: 1;
+            animation: glitter 1.5s infinite;
+        }
+
+        .urban-button:active {
+            transform: translateY(2px);
+        }
+
+        @keyframes glitter {
+            0% {
+                transform: rotate(45deg) translate(-50%, -50%);
+            }
+            100% {
+                transform: rotate(45deg) translate(50%, 50%);
+            }
+        }
         footer {
             background-color: #000000;
             color: #ffffff;
@@ -155,7 +206,7 @@
             <div class="product-coming-soon">
                 <div class="conatiner1">
                     <div id="menu" class="menu">
-                        <button onclick="window.location.href='https://asl-shop.github.io/inicio/dolores-hidalgo/'">DIRIGIRSE</button>
+                        <button class="urban-button" onclick="window.location.href='https://asl-shop.github.io/inicio/dolores-hidalgo/'">DIRIGIRSE</button>
                     </div>
                     <script>
                         function navigate(url) {
