@@ -131,6 +131,15 @@
             font-size: 2rem;
             margin: 0 0.5rem;
         }
+        #content {
+            display: none; /* Ocultar contenido inicialmente */
+        }
+        #warning {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -155,6 +164,27 @@
                 <h2>Dolores Hidalgo C.I.N., Gto.</h2>
                 <p>Descubre nuestros últimos productos de estilo urbano y expresa tu personalidad única.</p>
                 <a href="#productos" class="cta-button">Comprar Ahora</a>
+                <script>
+        async function checkLocation() {
+            try {
+                const response = await fetch('https://ipapi.co/json/');
+                const data = await response.json();
+
+                // Verifica si el usuario está en Dolores Hidalgo, Guanajuato
+                if (data.city === 'Dolores Hidalgo' && data.region === 'Guanajuato') {
+                    document.getElementById('warning').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                } else {
+                    document.body.innerHTML = '<h1>Acceso restringido</h1><p>Este sitio solo está disponible para residentes de Dolores Hidalgo, Guanajuato.</p>';
+                }
+            } catch (error) {
+                console.error('Error al obtener la ubicación:', error);
+                document.body.innerHTML = '<h1>Error</h1><p>No se pudo verificar la ubicación.</p>';
+            }
+        }
+
+        checkLocation();
+    </script>
             </section> <!-- Sección de inicio -->
             <section id="productos" class="products-section">
                 <h2>Nuestros Productos</h2>
