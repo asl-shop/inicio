@@ -175,10 +175,35 @@
     <nav>
         <ul>
             <li><a href="https://asl-shop.github.io/inicio/">Página Web Principal</a></li>
-            <li><a href="https://asl-shop.github.io/inicio/dolores-hidalgo-C.I.N./">Página Web de Dolores Hidalgo C.I.N.</a></li>
+            <li id="itemDolores" style="display: none;"><a href="https://asl-shop.github.io/inicio/dolores-hidalgo-C.I.N./">Página Web de Dolores Hidalgo C.I.N.</a></li>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
         </ul>
+        
+        <script>
+          function verificarUbicacion() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition((position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+                // Coordenadas aproximadas de Dolores Hidalgo, Guanajuato
+                const doloresLatMin = 21.0180;
+                const doloresLatMax = 21.0270;
+                const doloresLonMin = -101.1460;
+                const doloresLonMax = -101.1380;
+                // Verificar si la ubicación está en Dolores Hidalgo
+            if (lat >= doloresLatMin && lat <= doloresLatMax && lon >= doloresLonMin && lon <= doloresLonMax) {
+                document.getElementById('itemDolores').style.display = 'block'; // Mostrar solo si está en Dolores Hidalgo
+            }
+              }, (error) => {
+            console.error("Error al obtener la ubicación:", error);
+          });
+            } else {
+                  console.log("Geolocalización no es soportada por este navegador.");
+            }
+          }
+          verificarUbicacion();
+        </script>
     </nav>
     <div class="container1">
         <main>
