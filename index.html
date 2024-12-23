@@ -3,235 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASL SHOP | Inicio</title>
-    <link rel="icon" href="https://programmer-hugo.github.io/asl-shop/ASL-Shop.png" type="image/x-icon">
+    <title>Error 404 (Not Found)</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('ASL Shop-Photoroom.png');
-            background-size: cover; /* Ajusta la imagen al tamaño de la sección */
-            background-repeat: no-repeat; /* Evita que se repita la imagen */
-            background-position: center; /* Centra la imagen */
-            height: 100vh; /* Ajusta la altura según lo necesites */
-            color: white; /* Cambia el color del texto si es necesario */
-        }
-        .container-2:last-of-type a {
-            color: white;
-            text-decoration: none; /* Sin subrayado por defecto */
-        }
-        .container-2:last-of-type a:hover {
-             color: white;
-            text-decoration: underline; /* Subrayado al pasar el ratón */
-        }
-        .container1 {
-            text-align: center;
-            margin: 20px;
-        }
-        .p1 {
-            color: white; /* Color del texto */
-            margin: 10px 0; /* Espacio entre los párrafos */
-        }
-        header {
-            padding: 1rem;
-            text-align: center;
-            background-color: #1e1e1e;
-        }
-        .social-links {
-            margin-top: 1rem;
-        }
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-        }
-        .logo {
-            max-width: 300px;
-            width: 100%;
-        }
-        nav {
-            background-color: #ff0000;
-            padding: 0.5rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #ff0000;
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 1rem;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        .product-coming-soon {
-            background-color: rgba(51, 51, 51, 0.8);
-            padding: 2rem;
-            border-radius: 5px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .product {
-            background-color: rgba(51, 51, 51, 0.8);
-            padding: 1rem;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .urban-button {
-            position: relative;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: #fff;
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+        .logo {
+            margin-bottom: 20px;
         }
 
-        .urban-button::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
-            transform: rotate(45deg);
-            opacity: 0;
-            transition: all 0.5s ease;
-            z-index: -1;
+        .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 20px;
         }
 
-        .urban-button:hover {
-            transform: translateY(-5px) rotate(-3deg);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        .error-text h1 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 16px;
         }
 
-        .urban-button:hover::before {
-            opacity: 1;
-            animation: glitter 1.5s infinite;
+        .error-text h1 span {
+            color: #5f6368;
+            margin-left: 8px;
         }
 
-        .urban-button:active {
-            transform: translateY(2px);
+        .error-text p {
+            color: #5f6368;
+            margin: 0;
+            line-height: 1.5;
         }
 
-        @keyframes glitter {
-            0% {
-                transform: rotate(45deg) translate(-50%, -50%);
+        .robot-image {
+            width: 200px;
+            height: 200px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
-            100% {
-                transform: rotate(45deg) translate(50%, 50%);
+
+            .robot-image {
+                width: 150px;
+                height: 150px;
             }
-        }
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container-2">
-            <a href="https://asl-shop.github.io/inicio/">
-                <img src="https://programmer-hugo.github.io/asl-shop/ASL-Shop.png" alt="Logo de ASL SHOP" class="logo">
-            </a>
+    <div class="content">
+        <div class="error-text">
+            <h1>503. <span>This's under maintenance.</span></h1>
+            <p>The server is down for maintenance</p>
+            <p>Changes are being implemented.</p>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="https://asl-shop.github.io/inicio/">Página Web Principal</a></li>
-            <li><a href="https://asl-shop.github.io/inicio/dolores-hidalgo-C.I.N./">Página Web de Dolores Hidalgo C.I.N.</a></li>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-        </ul>
-    
-    </nav>
-    <div class="container1">
-        <main>
-            <section id="inicio">
-                <h1>Bienvenido a ASL SHOP</h1>
-                <p>Descubre nuestros últimos productos de estilo urbano y expresa tu personalidad única.</p>
-                  <div class="container-2">
-                    <p>Envíos exclusivos para <a target="_blank" href="https://google.com/maps/place/Dolores+Hidalgo,+Guanajuato/@21.1546023,-100.9732016,13z/data=!3m1!4b1!4m6!3m5!1s0x842b3c037b45da91:0x31b943f4e3ce4942!8m2!3d21.151597!4d-100.9367183!16zL20vMDFnODIx?authuser=0&entry=ttu&g_ep=EgoyMDI0MTAyMS4xIKXMDSoASAFQAw%3D%3D">Dolores Hidalgo C.I.N., Gto.</a></p>
-                  </div>
-                <a href="#productos" class="cta-button">Comprar Ahora</a>
-            </section>
-        
-        <section id="productos" class="products-section">
-            <h2>Nuestros Productos</h2>
-            <div class="product-coming-soon">
-                <div class="conatiner1">
-                    <p style="font-size: 1.5rem; font-weight: bold;">PRÓXIMAMENTE</p>
-                    <p>Estamos trabajando duro para traerte los mejores productos de estilo urbano.</p>
-                    <p>¡Vuelve pronto!</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="dh" class="products-section">
-            <h2>Dolores Hidalgo C.I.N.</h2>
-            <div class="product-coming-soon">
-                <div class="conatiner1">
-                    <div id="menu" class="menu">
-                        <button target="_blank" class="urban-button" href='https://asl-shop.github.io/inicio/dolores-hidalgo-C.I.N./'">DIRIGIRSE</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </main>
+
+        <img src="https://www.google.com/images/errors/robot.png" alt="Robot illustration" class="robot-image">
     </div>
-    <footer>    
-        <div class="social-links">
-            <div class="container-2">
-                <a href="https://www.instagram.com/asl_shop0" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn.icon-icons.com/icons2/836/PNG/96/Instagram_icon-icons.com_66804.png" alt="Instagram" weight="75px" height="75px">
-                </a>
-                <a href="mailto:asl.shop.oficial@gmail.com" target="_blank">
-                    <img src="https://cdn.icon-icons.com/icons2/614/PNG/96/email-envelope-outline-shape-with-rounded-corners_icon-icons.com_56530.png" alt="Email" weight="75px" height="75px" style="filter: invert(1);">
-                </a>
-            </div>
-        </div>
-        <div class="container-2">
-            <p>
-                <a target="_blank" href="https://programmer-hugo.github.io/sobre-mi">Página Web hecha por Hugo Elias</a>
-            </p>
-        </div>
-        <p>&copy; 2025 ASL SHOP. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
