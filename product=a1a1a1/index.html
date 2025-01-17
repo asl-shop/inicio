@@ -232,195 +232,7 @@
             justify-content: center;
             gap: 5px; /* Espacio entre el logo y el texto */
         }
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-            .nav-links1 {
-                list-style: none;
-                display: list-item;
-            }
-            .nav-links1 li {
-                margin-left: 1.5rem;
-                margin-top: 0.5rem;
-            }
-            .nav-links1 a {
-                color: #fff;
-                text-decoration: none;
-                transition: color 0.3s ease;
-                border-left: 2px solid rgb(129, 129, 129);
-                padding-left: 5px;
-            }
-            .nav-links1 a:hover {
-                color: rgb(55, 0, 255);;
-                border-left: 2px solid rgb(55, 0, 255);
-                padding-left: 5px;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                padding: 1rem;
-            }
-            .nav-links.show {
-                display: flex;
-            }
-            .nav-links li {
-                margin: 1rem 0;
-            }
-            .hamburger.active .hamburger-line:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            .hamburger.active .hamburger-line:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.active .hamburger-line:nth-child(3) {
-                transform: rotate(-45deg) translate(5px, -5px);
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-              <img src="https://asl-shop.github.io/inicio/ASL%20Shop.jpg" height="75px">
-            </div>
-            <button class="hamburger" aria-label="Menú de navegación">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#" class="a1"></a></li>
-                <li><a href="#01" class="a2-1">[...]</a></li>
-                <li><a href="#" class="a2-2">[...]</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="piojo"></section>
-      
-    <div class="container">
-        <div class="product-main">
-            <div class="product-gallery">
-                <img src="/placeholder.svg" alt="Producto Principal" class="product-image">
-            </div>
-            <div class="product-info">
-                <span class="badge">MÁS VENDIDO</span>
-                <h1 class="product-title">Producto ASL</h1>
-                <div class="price-container">
-                    <p><span class="original-price">$6,803</span></p>
-                    <p><span class="price">$4,694</span><span class="discount">31% OFF</span></p>
-                    <p><span class="discount">12 Meses Sin Intereses (MSI)</span></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="buy-box">
-            <div class="quantity" style="display: none;">
-                <span>Cantidad: 1 unidad</span>
-                <span>(50 disponibles)</span>
-            </div>
-            <a href="https://www.instagram.com/direct/t/17844428504775890">
-                <button class="btn-primary">Comprar ahora</button>
-            </a>
-            <div class="benefits">
-                <div class="benefit-item">
-                    <svg class="ui-pdp-icon ui-pdp-icon--return ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
-                        <use href="#returns"></use>
-                    </svg>
-                    <span>Devolución gratis. Tienes 30 días desde que lo recibes.</span>
-                </div>
-                <div class="benefit-item">
-                    <svg class="ui-pdp-icon ui-pdp-icon--protected ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15">
-                        <use href="#protected_buy"></use>
-                    </svg>
-                    <span>Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero.</span>
-                </div>
-                <div class="benefit-item">
-                    <svg class="ui-pdp-icon ui-pdp-icon--protected ui-pdp-color--GRAY" xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14">
-                        <use href="#warranty"></use>
-                    </svg>
-                    <span>12 meses de garantía de fábrica.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <img src="ASL Shop.png" alt="ASL" class="logo-image">
-            <p style="color: white;">© 2025 ASL Shop. Todos los Derechos Reservados.</p>
-        </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
-
-            hamburger.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('show');
-            });
-
-            // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('show');
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASL Shop - Detalles del Producto</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background: white;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 50px;
-        }
-
-        .container {
+        .product-container {
             max-width: 1200px;
             margin: 20px auto;
             padding: 0 20px;
@@ -543,15 +355,151 @@
             .container {
                 grid-template-columns: 1fr;
             }
+            .hamburger {
+                display: block;
+            }
+            .nav-links1 {
+                list-style: none;
+                display: list-item;
+            }
+            .nav-links1 li {
+                margin-left: 1.5rem;
+                margin-top: 0.5rem;
+            }
+            .nav-links1 a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                border-left: 2px solid rgb(129, 129, 129);
+                padding-left: 5px;
+            }
+            .nav-links1 a:hover {
+                color: rgb(55, 0, 255);;
+                border-left: 2px solid rgb(55, 0, 255);
+                padding-left: 5px;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 1rem;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="https://sjc.microlink.io/ReCgl58MyStVrf-Yv3QNcoyTjM5uxzbVq1CIbR5pY6OXwDqdOcT_1aVaZzZ0Yr1o9b5tKeyjNPm4IJ3RoqXqlQ.jpeg" alt="ASL Logo" class="logo">
-        </div>
+        <nav class="container">
+            <div class="logo">
+              <img src="https://asl-shop.github.io/inicio/ASL%20Shop.jpg" height="75px">
+            </div>
+            <button class="hamburger" aria-label="Menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#" class="a1"></a></li>
+                <li><a href="#01" class="a2-1">[...]</a></li>
+                <li><a href="#" class="a2-2">[...]</a></li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <section class="piojo"></section>
+    
+        <div class="product-container">
+            <div class="product-main">
+                <div class="product-gallery">
+                    <img src="/placeholder.svg" alt="Producto Principal" class="product-image">
+                </div>
+                <div class="product-info">
+                    <span class="badge">MÁS VENDIDO</span>
+                    <h1 class="product-title">Nombre del Producto ASL</h1>
+                    <div class="rating">
+                        ★★★★☆ (904 calificaciones)
+                    </div>
+                    <div class="price-container">
+                        <p><span class="original-price">$6,803</span></p>
+                        <p>
+                            <span class="price">$4,694</span>
+                            <span class="discount">31% OFF</span>
+                            </p>
+                        <p><span class="discount">6 Meses Sin Intereses (MSI)</span></p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="buy-box">
+                <div class="quantity">
+                    <span>Cantidad: 1 unidad</span>
+                    <span>(50 disponibles)</span>
+                </div>
+                <button class="btn-primary">Comprar ahora</button>
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <img src="/placeholder.svg" alt="Envío">
+                        <span>Devolución gratis. Tienes 30 días desde que lo recibes.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="/placeholder.svg" alt="Protección">
+                        <span>Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="/placeholder.svg" alt="Garantía">
+                        <span>12 meses de garantía de fábrica.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <footer>
+        <div class="footer-content">
+            <img src="ASL Shop.png" alt="ASL" class="logo-image">
+            <p style="color: white;">© 2025 ASL Shop. Todos los Derechos Reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('show');
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('show');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
